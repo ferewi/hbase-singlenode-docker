@@ -6,9 +6,9 @@ MAINTAINER Ferdinand Rewicki <ferdi@glasspod.de>
 RUN apt-get update && \
     apt-get install -y openjdk-7-jre wget vim
 
-ENV HBASE_VERSION "1.2.4"
+ENV HBASE_VERSION 1.2.4
 RUN cd /opt \
-    && curl -L http://mirror.synyx.de/apache/hbase/stable/hbase-${HBASE_VERSION}-bin.tar.gz \
+    && wget http://mirror.synyx.de/apache/hbase/stable/hbase-${HBASE_VERSION}-bin.tar.gz \
     && tar xzvf hbase-${HBASE_VERSION}-bin.tar.gz \
     && rm hbase-${HBASE_VERSION}-bin.tar.gz \
     && mv hbase-${HBASE_VERSION} hbase

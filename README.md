@@ -6,7 +6,7 @@
 ### 1. Run the image
 
 ```
-docker run -d --name some_hbase jimtonic/hbase-singlnode
+docker run -d --name some_hbase jimtonic/hbase-singlenode
 ```
 
 Exposed Ports:

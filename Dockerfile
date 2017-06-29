@@ -8,7 +8,7 @@ RUN apt-get update && \
 
 ENV HBASE_VERSION "1.2.4"
 RUN cd /opt \
-    && wget http://mirror.synyx.de/apache/hbase/stable/hbase-${HBASE_VERSION}-bin.tar.gz \
+    && curl -L http://mirror.synyx.de/apache/hbase/stable/hbase-${HBASE_VERSION}-bin.tar.gz \
     && tar xzvf hbase-${HBASE_VERSION}-bin.tar.gz \
     && rm hbase-${HBASE_VERSION}-bin.tar.gz \
     && mv hbase-${HBASE_VERSION} hbase

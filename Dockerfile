@@ -4,11 +4,11 @@ MAINTAINER Ferdinand Rewicki <ferdi@glasspod.de>
 
 # install java jdk 8 and other tools
 RUN apt-get update && \
-    apt-get install -y openjdk-7-jre wget vim
+    apt-get install -y openjdk-7-jre wget vim bash tar
 
 ENV HBASE_VERSION 1.2.4
-RUN cd /opt \
-    && wget http://mirror.synyx.de/apache/hbase/stable/hbase-${HBASE_VERSION}-bin.tar.gz \
+WORKDIR /opt
+RUN wget http://archive.apache.org/dist/hbase/${HBASE_VERSION}/hbase-${HBASE_VERSION}-bin.tar.gz \
     && tar xzvf hbase-${HBASE_VERSION}-bin.tar.gz \
     && rm hbase-${HBASE_VERSION}-bin.tar.gz \
     && mv hbase-${HBASE_VERSION} hbase

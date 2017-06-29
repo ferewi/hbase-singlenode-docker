@@ -1,6 +1,6 @@
 FROM ubuntu:trusty
 
-MAINTAINER Ferdinand Rewicki <ferdi@glasspod.de>
+MAINTAINER Ferdinand Rewicki <ferdinand.rewicki@gmx.de>
 
 # install java jdk 8 and other tools
 RUN apt-get update && \
